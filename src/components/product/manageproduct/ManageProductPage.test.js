@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import { authors, newProduct, products } from "../../../tools/mockData";
+import { authors, newProduct, products } from "../../../../tools/mockData";
 import { ManageProductPage } from "./ManageProductPage";
 
 function render(args) {

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { loadProducts, saveProduct } from "../../redux/actions/productActions";
-import { loadAuthors } from "../../redux/actions/authorActions";
+import { loadProducts, saveProduct } from "../../../redux/actions/productActions";
+import { loadAuthors } from "../../../redux/actions/authorActions";
 import PropTypes from "prop-types";
-import ProductForm from "./ProductForm";
-import { newProduct } from "../../../tools/mockData";
-import Spinner from "../common/Spinner";
+import ProductForm from "../ProductForm";
+import { newProduct } from "../../../../tools/mockData";
+import Spinner from "../../common/Spinner";
 import { toast } from "react-toastify";
 
 export function ManageProductPage({

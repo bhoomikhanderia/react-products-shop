@@ -4,11 +4,13 @@ import * as productActions from "../../redux/actions/productActions";
 import * as authorActions from "../../redux/actions/authorActions";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
-import ProductList from "./ProductList";
+import ProductList from "../../components/product/ProductList";
 import { Redirect } from "react-router-dom";
-import Spinner from "../common/Spinner";
+import Spinner from "../../components/common/Spinner";
 import { toast } from "react-toastify";
-import ProductCartList from "../product/ProductCartList";
+import ProductCartList from "../cart/ProductCartList";
+import CartTotal from '../cart/ProductCartTotal';
+
 
 class ProductsPage extends React.Component {
   state = {
@@ -39,6 +41,10 @@ class ProductsPage extends React.Component {
       toast.error("Delete failed. " + error.message, { autoClose: false });
     }
   };
+
+    checkoutButtonClick = () => {
+        this.props.history.push("/checkout");
+    };
 
 
   onAddToCart(product) {
@@ -74,11 +80,16 @@ class ProductsPage extends React.Component {
             </>
           )}
         {cartList.length > 0 && (
+          <>
 
           <ProductCartList
             cartList={cartList}
             onChangeQty={this.props.actions.onChangeQty}
           />
+
+            <CartTotal cartList={cartList} />
+            <button className="btn btn-primary text-center mb-3" onClick={this.checkoutButtonClick}>Checkout</button>
+          </>
 
         )}
       </>
@@ -123,7 +134,9 @@ function mapDispatchToProps(dispatch) {
       loadAuthors: bindActionCreators(authorActions.loadAuthors, dispatch),
       deleteProduct: bindActionCreators(productActions.deleteProduct, dispatch),
       onChangeQty: bindActionCreators(productActions.onChangeQty, dispatch),
-      onAddToCart: bindActionCreators(productActions.onAddToCart, dispatch)
+      onAddToCart: bindActionCreators(productActions.onAddToCart, dispatch),
+      clearCart:  bindActionCreators(productActions.clearCart, dispatch)
+
     }
   };
 }

@@ -4,14 +4,15 @@ import * as types from "../actions/actionTypes";
 // import initialState from "./initialState";
 const initialState = {
   products: [],
-  cartList: []
+  cartList: [],
+    orders: []
 };
 
 export default function productReducer(state = initialState, action) {
   console.log("start state");
   console.log("state_action");
   console.log(action);
-  const { products, cartList } = state;
+  const { products, cartList, orders } = state;
   switch (action.type) {
     case types.CREATE_PRODUCT_SUCCESS:
       // return [...state, { ...action.product }];
@@ -89,24 +90,30 @@ export default function productReducer(state = initialState, action) {
       // const product = state.product;
 
       const { direction, id } = action.direction_object;
-      const temp_cartlist = cartList.map(product => {
+      const temp_cartlist = cartList.filter(product => {
         if (product.id === id) {
           if (direction === "+") {
             product.qty += 1;
             product.total = product.price * product.qty;
+              return product;
           } else {
             if (product.qty > 0) {
               product.qty -= 1;
               product.total = product.price * product.qty;
 
               if (product.qty === 0) {
-                const index = cartList.findIndex(product => product.id === id);
-                const productIndex = state.products.findIndex(
-                  product => product.id === id
-                );
-                state.products[productIndex].added = 0;
-                cartList.splice(index, 1);
+                // const index = cartList.findIndex(product => product.id === id);
+                // const productIndex = state.products.findIndex(
+                //   product => product.id === id
+                // );
+                //
+                // console.log(productIndex);
+                // console.log(index);
+                // state.products[productIndex].added = 0;
+
+                return null;
               }
+              return product;
             }
           }
         }
@@ -117,6 +124,31 @@ export default function productReducer(state = initialState, action) {
         ...state,
         cartList: temp_cartlist
       };
+
+      case types.CLEAR_CART:
+
+          // let temp_cart_products = [...cartList];
+          let tempproducts = [...products];
+
+          const new_order = {
+              id: state.orders.length,
+              products: state.cartList,
+              user_info: {
+                  fname: action.fname,
+                  lname: action.lname,
+                  suburb: action.suburb,
+                  state: action.state,
+                  postcode: action.postcode,
+                  phoneno: action.phoneno
+              }
+          };
+          return {
+              ...state,
+              products: tempproducts,
+              orders: [...orders, new_order],
+              cartList: [],
+              total: 0
+          };
 
     default:
       return state;

@@ -23,7 +23,7 @@ export function deleteProductOptimistic(product) {
 }
 
 export function loadProducts() {
-  return function (dispatch) {
+  return function(dispatch) {
     dispatch(beginApiCall());
     console.log("productApi");
     console.log(productApi.getProducts());
@@ -45,7 +45,7 @@ export function loadProducts() {
 
 export function saveProduct(product) {
   //eslint-disable-next-line no-unused-vars
-  return function (dispatch, getState) {
+  return function(dispatch, getState) {
     dispatch(beginApiCall());
     return productApi
       .saveProduct(product)
@@ -62,7 +62,7 @@ export function saveProduct(product) {
 }
 
 export function deleteProduct(product) {
-  return function (dispatch) {
+  return function(dispatch) {
     // Doing optimistic delete, so not dispatching begin/end api call
     // actions, or apiCallError action since we're not showing the loading status for this.
     dispatch(deleteProductOptimistic(product));
@@ -80,5 +80,16 @@ export function onChangeQty(id, direction) {
   const direction_object = { id, direction };
   // dispatch(onChangeQty(id, direction));
   return { type: types.ON_CHANGE_QTY, direction_object };
+}
 
+export function clearCart(fname, lname, suburb, state, postcode, phoneno) {
+    return {
+        type: types.CLEAR_CART,
+        fname: fname,
+        lname: lname,
+        suburb: suburb,
+        state: state,
+        postcode: postcode,
+        phoneno: phoneno
+    };
 }

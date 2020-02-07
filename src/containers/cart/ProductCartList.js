@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCartItem from "../product/ProductCartItem";
+import ProductCartItem from "./ProductCartItem";
 import PropTypes from "prop-types";
 
 class ProductCartList extends React.Component {
@@ -25,6 +25,7 @@ class ProductCartList extends React.Component {
                 product={product}
                 onChangeQty={onChangeQty}
               />
+
             );
           })}
         </tbody>

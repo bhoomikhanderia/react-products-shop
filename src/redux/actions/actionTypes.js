@@ -14,3 +14,4 @@ export const API_CALL_ERROR = "API_CALL_ERROR";
 export const DELETE_PRODUCT_OPTIMISTIC = "DELETE_PRODUCT_OPTIMISTIC";
 export const ON_ADD_TO_CART = "ON_ADD_TO_CART"; //change
 export const ON_CHANGE_QTY = "ON_CHANGE_QTY";
+export const CLEAR_CART = "CLEAR_CART";
