@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fbd0780-1b6a-4e39-af95-5767c40145f7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Error.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/product/order/Productorder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/cart/ProductCartTotal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/cart/ProductTotalRow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/checkout/Checkout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/checkout/OrderConfirm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/ManageProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/manageproduct/ManageProductPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/ManageProductPage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/manageproduct/ManageProductPage.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/ProductCartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/cart/ProductCartItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/ProductCartList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/cart/ProductCartList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/product/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/productActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/productActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/productReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/productReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="9fbd0780-1b6a-4e39-af95-5767c40145f7" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -270,12 +249,12 @@
       <updated>1563238130717</updated>
       <workItem from="1563238131962" duration="1955000" />
       <workItem from="1563319882616" duration="35000" />
-      <workItem from="1578376449600" duration="49187000" />
+      <workItem from="1578376449600" duration="49454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51177000" />
+    <option name="totallyTimeSpent" value="51444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3423" y="96" width="1789" height="1040" extended-state="0" />
